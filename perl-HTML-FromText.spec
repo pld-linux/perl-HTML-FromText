@@ -2,8 +2,8 @@
 Summary:	HTML-FromText perl module
 Summary(pl):	Modu³ perla HTML-FromText
 Name:		perl-HTML-FromText
-Version:	1.003
-Release:	3
+Version:	1.005
+Release:	1
 Copyright:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
@@ -37,14 +37,14 @@ make install DESTDIR=$RPM_BUILD_ROOT
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        README
+        README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz
+%doc {README,TODO}.gz
 
 %{perl_sitelib}/HTML/FromText.pm
 %{perl_sitearch}/auto/HTML/FromText
