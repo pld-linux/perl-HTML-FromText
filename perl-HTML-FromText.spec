@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	FromText
-Summary:	HTML-FromText perl module
-Summary(pl):	Modu³ perla HTML-FromText
+Summary:	HTML::FromText perl module
+Summary(pl):	Modu³ perla HTML::FromText
 Name:		perl-HTML-FromText
 Version:	1.005
 Release:	6
@@ -15,10 +15,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-HTML-FromText converts text to HTML.
+HTML::FromText converts text to HTML.
 
 %description -l pl
-HTML-FromText konwertuje tekst do formatu HTML.
+HTML::FromText konwertuje tekst do formatu HTML.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
