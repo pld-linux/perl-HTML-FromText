@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	FromText
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTML-FromText perl module
 Summary(pl):	Modu³ perla HTML-FromText
 Name:		perl-HTML-FromText
 Version:	1.005
-Release:	5
-
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ HTML-FromText converts text to HTML.
 HTML-FromText konwertuje tekst do formatu HTML.
 
 %prep
-%setup -q -n HTML-FromText-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
