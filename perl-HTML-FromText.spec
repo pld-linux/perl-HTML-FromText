@@ -4,12 +4,12 @@
 Summary:	HTML::FromText perl module
 Summary(pl):	Modu³ perla HTML::FromText
 Name:		perl-HTML-FromText
-Version:	1.005
-Release:	7
+Version:	2.00
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	983342bb72acc94ce58b6c7d3a14f62b
+# Source0-md5:	db5b90d143273c50e44309e7991f040f
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 5.6
 BuildArch:	noarch
@@ -39,6 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO
+%doc README Changes
 %{perl_vendorlib}/HTML/FromText.pm
 %{_mandir}/man3/*
