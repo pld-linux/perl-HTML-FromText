@@ -27,7 +27,7 @@ BuildRequires:	perl(Text::Tabs) >= 98.1128
 BuildRequires:	perl-Test-Pod >= 0.95
 BuildRequires:	perl-Test-Simple >= 0.47
 %endif
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
