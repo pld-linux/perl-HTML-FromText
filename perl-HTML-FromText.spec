@@ -1,17 +1,33 @@
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	FromText
-Summary:	HTML::FromText perl module
-Summary(pl):	Modu³ perla HTML::FromText
+Summary:	HTML::FromText module - convert plain text to HTML
+Summary(pl):	Modu³ HTML::FromText - konwersja czystego tekstu do HTML
 Name:		perl-HTML-FromText
-Version:	2.02
+Version:	2.05
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	32ccecd6ffd6e01da8c6c6a9d91080c6
+# Source0-md5:	fb8ae4ab0cae0b57101f78b046b3927b
+%if %{with tests}
+BuildRequires:	perl-Email-Find >= 0.09
+BuildRequires:	perl-Exporter-Lite >= 0.01
+BuildRequires:	perl-HTML-Parser >= 3.26
+BuildRequires:	perl(HTML::Entities) >= 1.26
+# Scalar::Util in perl-modules 5.8.0 is too old
+BuildRequires:	perl-Scalar-List-Utils >= 1.12
+BuildRequires:	perl(Scalar::Util) >= 1.12
+BuildRequires:	perl(Text::Tabs) >= 98.1128
+BuildRequires:	perl-Test-Pod >= 0.95
+BuildRequires:	perl-Test-Simple >= 0.47
+%endif
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,18 +45,21 @@ HTML::FromText konwertuje tekst do formatu HTML.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc Changes README
 %attr(755,root,root) %{_bindir}/text2html
-%doc README Changes
 %{perl_vendorlib}/HTML/FromText.pm
 %{_mandir}/man1/*
 %{_mandir}/man3/*
