@@ -5,7 +5,7 @@ Summary:	HTML::FromText perl module
 Summary(pl):	Modu³ perla HTML::FromText
 Name:		perl-HTML-FromText
 Version:	1.005
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
