@@ -3,8 +3,8 @@
 %bcond_without	tests	# don't perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	HTML
-%define	pnam	FromText
+%define		pdir	HTML
+%define		pnam	FromText
 Summary:	HTML::FromText Perl module - convert plain text to HTML
 Summary(pl):	Modu³ Perla HTML::FromText - konwersja czystego tekstu do HTML
 Name:		perl-HTML-FromText
