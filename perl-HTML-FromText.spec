@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# don't perform "make test"
+%bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	HTML
@@ -9,7 +9,7 @@ Summary:	HTML::FromText Perl module - convert plain text to HTML
 Summary(pl):	Modu³ Perla HTML::FromText - konwersja czystego tekstu do HTML
 Name:		perl-HTML-FromText
 Version:	2.05
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
