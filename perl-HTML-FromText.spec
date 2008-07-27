@@ -9,7 +9,7 @@ Summary:	HTML::FromText Perl module - convert plain text to HTML
 Summary(pl.UTF-8):	Moduł Perla HTML::FromText - konwersja czystego tekstu do HTML
 Name:		perl-HTML-FromText
 Version:	2.05
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
