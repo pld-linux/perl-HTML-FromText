@@ -4,7 +4,6 @@
 
 %define		pdir	HTML
 %define		pnam	FromText
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::FromText Perl module - convert plain text to HTML
 Summary(pl.UTF-8):	Moduł Perla HTML::FromText - konwersja czystego tekstu do HTML
 Name:		perl-HTML-FromText
